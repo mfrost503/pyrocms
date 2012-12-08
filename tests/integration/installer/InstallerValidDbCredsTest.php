@@ -48,7 +48,7 @@ class TestInstallerValidDbCreds extends PHPUnit_Extensions_Selenium2TestCase
 
     public function FileSystemNotWritable()
     {
-        //exec('sudo chmod -R 555 ../../../*');
+        exec('sudo chmod -R 555 ../../../*');
         $this->url('/installer');
         $this->byId('next_step')->click();
         $this->byId('hostname')->clear();
